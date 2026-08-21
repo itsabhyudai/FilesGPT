@@ -260,6 +260,4 @@ The embedding model downloads on first use (~1.3GB) and is cached in the `hf_cac
 
 </details>
 
-## License
 
-No license file yet — add one before making the repository public.
