@@ -218,46 +218,6 @@ Create `frontend/.env.local` containing `VITE_API_BASE_URL=http://127.0.0.1:5000
 cd frontend && npm install && npm run dev
 ```
 
-## Troubleshooting
 
-<details>
-<summary><b>Uploads fail with a Pinecone dimension error</b></summary>
-
-<br>
-
-Your index is not 1024-dimensional. Pinecone cannot change an index's dimension after creation — delete it and create a new one with `1024` dimensions and the `cosine` metric.
-
-</details>
-
-<details>
-<summary><b>Queries fail with <code>model_not_found</code></b></summary>
-
-<br>
-
-Groq retires models periodically. List the models your key can actually use, then set `GROQ_MODEL` to one of them:
-
-```bash
-docker compose exec backend python -c "from groq import Groq; print([m.id for m in Groq().models.list().data])"
-```
-
-</details>
-
-<details>
-<summary><b>A website returns "blocking automated requests"</b></summary>
-
-<br>
-
-Some sites reject non-browser traffic outright. This is a limitation of the target site rather than a bug — try a different URL, or save the page as a PDF and upload that instead.
-
-</details>
-
-<details>
-<summary><b>The first upload is slow</b></summary>
-
-<br>
-
-The embedding model downloads on first use (~1.3GB) and is cached in the `hf_cache` Docker volume. Later uploads are much faster.
-
-</details>
 
 
