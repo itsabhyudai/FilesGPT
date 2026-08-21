@@ -19,7 +19,7 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-4">Follow Us</h3>
           <div className="flex justify-center md:justify-start gap-4">
             <a
-              href="https://github.com/"
+              href="https://github.com/itsabhyudai"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-sky-500 transition"
@@ -28,7 +28,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/itsabhyudai/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-sky-500 transition"
