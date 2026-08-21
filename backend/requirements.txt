@@ -1,0 +1,40 @@
+# Web framework
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+email-validator
+
+# Auth
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1  # 4.1+ breaks passlib 1.7.4's version probe — keep pinned with the line above
+python-jose[cryptography]
+
+# Database
+motor
+
+# Retrieval / generation
+langchain-classic
+langchain-core
+langchain-text-splitters
+langchain-huggingface
+langchain-groq
+langchain-pinecone
+pinecone
+
+# Embedding model (runs locally on CPU).
+# The Dockerfile installs torch from PyTorch's CPU index first — installing it
+# from PyPI instead pulls the CUDA build and ~7GB of unused NVIDIA libraries.
+torch
+transformers
+sentence-transformers
+
+# Document parsing
+pymupdf
+beautifulsoup4
+requests
+google-genai
+
+# Avatar uploads
+cloudinary
